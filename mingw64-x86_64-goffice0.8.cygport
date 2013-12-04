@@ -1,0 +1,14 @@
+CROSS_HOST="x86_64-w64-mingw32"
+ORIG_PN="goffice"
+inherit cross gnome2
+
+NAME="mingw64-x86_64-goffice0.8"
+VERSION=0.8.17
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="GTK+2 office application library for Win64 toolchain"
+DESCRIPTION="A set of document-centric objects and utilities for GNOME"
+
+PATCH_URI="0.8.17-glib-single-includes.patch"
+
+DIFF_EXCLUDES="*.types *-features.h"

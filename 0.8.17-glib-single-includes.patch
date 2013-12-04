@@ -1,0 +1,11 @@
+--- origsrc/goffice-0.8.17/configure.in	2011-06-16 18:46:53.000000000 -0500
++++ src/goffice-0.8.17/configure.in	2013-08-02 14:27:13.442155700 -0500
+@@ -493,7 +493,7 @@ SAVE_LIBS=$LIBS
+ CFLAGS="$CFLAGS $GOFFICE_CFLAGS"
+ LIBS="$GOFFICE_LIBS $LIBS"
+ AC_MSG_CHECKING([for G_REGEX_ERROR_STRAY_BACKSLASH])
+-AC_LINK_IFELSE([AC_LANG_PROGRAM([[#include <glib/gregex.h>]], [[GRegexError error=G_REGEX_ERROR_STRAY_BACKSLASH;]])],
++AC_LINK_IFELSE([AC_LANG_PROGRAM([[#include <glib.h>]], [[GRegexError error=G_REGEX_ERROR_STRAY_BACKSLASH;]])],
+                [AC_DEFINE(HAVE_G_REGEX_ERROR_STRAY_BACKSLASH, 1, [Define if G_REGEX_ERROR_STRAY_BACKSLASH is defined])
+ 	        glib_has_G_REGEX_ERROR_STRAY_BACKSLASH=yes
+                 AC_MSG_RESULT(yes)],
